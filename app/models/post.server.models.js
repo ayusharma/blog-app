@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const TextSchema = new Schema({
+  content: {
+    type: String,
+    default: ''
+  }
+});
 
 const PostSchema = new Schema({
   created: {
@@ -13,13 +19,7 @@ const PostSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  text: {
-    type: Array,
-    default: []
-  }
+  text: [TextSchema]
 });
-
-
-
 
 mongoose.model('Post', PostSchema);

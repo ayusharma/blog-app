@@ -25,6 +25,7 @@ module.exports = function() {
   app.use(methodOverride());
 
   require('../app/routes/post.server.route.js')(app);
+  require('../app/routes/comment.server.route.js')(app);
 
   // Static server
   // Note how the express.static() middleware is placed below the call for the

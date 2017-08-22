@@ -25,9 +25,8 @@ exports.create = function(req, res) {
 
 
 exports.split = function (req, res, next) {
-  const newContent = req.body.text.split('\n\n').reduce((result, value)=> {
+  const newContent = req.body.text.split('\n\n').reduce((result, value) => {
     let obj = {};
-    obj.comment = [];
     obj.content = value,
     result.push(obj);
     return result
