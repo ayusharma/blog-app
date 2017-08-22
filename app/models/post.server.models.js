@@ -14,11 +14,12 @@ const PostSchema = new Schema({
     required: 'Title cannot be blank'
   },
   text: {
-    type: String,
-    default: '',
-    trim: true
+    type: Array,
+    default: []
   }
 });
+
+
 
 
 mongoose.model('Post', PostSchema);
