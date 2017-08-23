@@ -6,4 +6,4 @@ module.exports = function (app) {
 
   app.route('/api/comment/:pid')
     .get(comment.find);
-}
+};

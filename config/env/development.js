@@ -1,4 +1,4 @@
 module.exports = {
   sessionSecret: 'developmentSessionSecret',
-  db: 'mongodb://localhost/chat-app',
-}
+  db: 'mongodb://localhost/chat-app'
+};

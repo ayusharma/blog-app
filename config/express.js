@@ -3,13 +3,10 @@ const morgan = require('morgan');
 const comrepss = require('compression');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const config = require('./config');
-//const socketio = require('./socketio');
 
-module.exports = function() {
+module.exports = function () {
   const app = express();
 
-  //socketio(app);
   // logging
   if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
@@ -18,7 +15,7 @@ module.exports = function() {
   }
 
   // request parser
-  app.use(bodyParser.urlencoded({extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
   // Extended methods PUT, DELETE
@@ -35,4 +32,4 @@ module.exports = function() {
   // filesystem I/O operation.
   app.use(express.static('./public'));
   return app;
-}
+};

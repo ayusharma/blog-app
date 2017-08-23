@@ -1,0 +1,25 @@
+{
+  "name": "Blog App",
+  "version": "1.0.0",
+  "description": "A Simple Blog App in Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ayusharma",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "crypto": "0.0.3",
+    "express": "4.15.3",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.10.8",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "https://github.com/InnovAccer/eslint-config-airbnb-base.git",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}

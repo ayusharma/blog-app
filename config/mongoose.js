@@ -6,4 +6,4 @@ module.exports = function () {
   require('../app/models/post.server.models.js');
   require('../app/models/comment.server.models.js');
   return db;
-}
+};

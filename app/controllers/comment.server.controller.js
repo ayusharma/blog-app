@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Comment = mongoose.model('Comment');
 
 
-function getErrorMessage (err) {
+function getErrorMessage(err) {
   if (err.errors) {
     return err;
   }
   return 'Unknown Server Error';
 }
 
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   const comment = new Comment(req.body);
 
   comment.save((err) => {
@@ -17,14 +17,13 @@ exports.create = function(req, res) {
       return res.status(400).send({
         message: getErrorMessage(err)
       });
-    } else {
-      res.status(200).json(comment);
     }
+    return res.status(200).json(comment);
   });
 };
 
 
-exports.find = function(req, res) {
+exports.find = function (req, res) {
   Comment.find({
     paragraphId: req.params.pid
   }).sort('-created').exec((err, comments) => {
@@ -32,8 +31,7 @@ exports.find = function(req, res) {
       return res.status(400).send({
         message: getErrorMessage(err)
       });
-    } else {
-      res.status(200).json(comments);
     }
+    return res.status(200).json(comments);
   });
 };
