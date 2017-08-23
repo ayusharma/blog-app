@@ -48,3 +48,17 @@ exports.list = function(req, res) {
     }
   });
 }
+
+exports.blog = function(req, res) {
+  Post.find({
+    _id: req.params.id
+  }).exec((err, blog) => {
+    if (err) {
+      return res.status(400).send({
+        message: getErrorMessage(err)
+      });
+    } else {
+      res.status(200).json(blog);
+    }
+  });
+}

@@ -4,4 +4,7 @@ module.exports = function (app) {
   app.route('/api/posts')
      .get(post.list)
      .post(post.split, post.create);
+
+  app.route('/api/posts/:id')
+     .get(post.blog)
 }
