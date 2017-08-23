@@ -148,7 +148,7 @@ Request URL: /api/comment
 Method: POST
 Body: {
 	"paragraphId": "599d212fa69dd4742dda0cca",
-	"conten": "I am a comment."
+	"content": "I am a comment."
 }
 
 ```
@@ -162,7 +162,7 @@ Body: {
 }
 ```
 
-#### 5. Get All comments of a paragraph
+#### 6. Get All comments of a paragraph
 
 ##### Request
 ```
